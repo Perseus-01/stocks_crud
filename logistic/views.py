@@ -18,6 +18,6 @@ class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     # при необходимости добавьте параметры фильтрации
-    filter_fields = ['address', 'prodcuts']
+    filterset_fields = ['address', 'products']
     filter_backends = [DjangoFilterBackend, SearchFilter]
     search_fields = ['address', 'product']
